@@ -386,4 +386,12 @@ public class matrix {
         matrix solution = new matrix(solutionVector);
         return solution;
     }
+
+    public void  LUFactorization() {
+        matrix originMatrix = new matrix(matrix);
+        matrix upperTriangular = originMatrix.rowEchelon();
+        matrix lowerTriangular = originMatrix.transpose().rowEchelon();
+        upperTriangular.printMatrix();
+        lowerTriangular.printMatrix();
+    }
 }
